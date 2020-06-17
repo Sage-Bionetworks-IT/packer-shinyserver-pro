@@ -14,7 +14,7 @@
         executable: pip3
 
     - name: Install dependencies
-      shell: "yes | aptdcon --hide-terminal --install gdebi-core zlib1g-dev libclang-dev libssl-dev libffi-dev libcurl4-openssl-dev libapparmor1 libssl1.0.0 libxml2-dev libjpeg-dev libpng-dev libcairo2-dev libxt-dev bzip2"
+      shell: "yes | aptdcon --hide-terminal --install gdebi-core zlib1g-dev libclang-dev libssl-dev libffi-dev libcurl4-openssl-dev libapparmor1 libssl1.0.0 libxml2-dev libjpeg-dev libpng-dev libcairo2-dev libxt-dev bzip2 unixodbc unixodbc-devel"
 
     - name: Add the CRAN apt key
       apt_key:
@@ -44,6 +44,12 @@
     - name: Install BiocManager
       shell: "/opt/R/3.6.3/bin/R -e \"install.packages('biocManager', repos='https://cran.rstudio.com/')\""
 
+    - name: Install RStudio Professional Drivers
+      shell: "curl -O https://drivers.rstudio.org/7C152C12/installer/rstudio-drivers_1.6.0_amd64.deb && yes | gdebi rstudio-drivers_1.6.0_amd64.deb"
+
+    - name: Basic driver config
+      shell: "cp /etc/odbcinst.ini /etc/odbcinst.ini.bak && cat /opt/rstudio-drivers/odbcinst.ini.sample | tee /etc/odbcinst.ini"
+
     # R 4.0.0
     - name: Install R 4.0
       shell: "curl -O https://cdn.rstudio.com/r/ubuntu-1804/pkgs/r-4.0.0_1_amd64.deb && yes | gdebi r-4.0.0_1_amd64.deb"
@@ -66,6 +72,12 @@
 
     - name: Install BiocManager
       shell: "/opt/R/4.0.0/bin/R -e \"install.packages('biocManager', repos='https://cran.rstudio.com/')\""
+
+    - name: Install RStudio Professional Drivers
+      shell: "curl -O https://drivers.rstudio.org/7C152C12/installer/rstudio-drivers_1.6.0_amd64.deb && yes | gdebi  rstudio-drivers_1.6.0_amd64.deb"
+
+    - name: Basic driver config
+      shell: "cp /etc/odbcinst.ini /etc/odbcinst.ini.bak && cat /opt/rstudio-drivers/odbcinst.ini.sample | tee /etc/odbcinst.ini"
 
     # Symlink R 4.0.0
     - name: Symlink R 4.0.0

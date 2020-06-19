@@ -1,5 +1,5 @@
-# packer-ami-template
-A template for quickly getting a new packer AWS AMI project started.
+# packer-shinyserver-pro
+A template to build a Shiny Server Pro with support for R3.6 and R4.0
 
 __Note__: The files in this template are specifically to build a Ubuntu distribution.
 You may need to modify it slightly to work with other distros (redhat, aws linux, windows, etc..)

@@ -29,26 +29,26 @@
       shell: "aptdcon --add-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu {{ ansible_distribution_release }}-cran35/' && aptdcon --refresh"
 
     # Install R packages for R 3.6.3
-    - name: Install devtools
-      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('devtools', repos=('https://cran.rstudio.com/'))\""
+    # - name: Install devtools
+    #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('devtools', repos=('https://cran.rstudio.com/'))\""
 
-    - name: Install synapser
-      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('synapser', repos=c('http://ran.synapse.org', 'https://cran.rstudio.com/'))\""
+    # - name: Install synapser
+    #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('synapser', repos=c('http://ran.synapse.org', 'https://cran.rstudio.com/'))\""
 
-    - name: Install tidyverse
-      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('tidyverse')\""
+    # - name: Install tidyverse
+    #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('tidyverse')\""
 
     - name: Install shiny
       shell: "/opt/R/3.6.3/bin/R -e \"install.packages('shiny', repos='https://cran.rstudio.com/')\""
 
-    - name: Install BiocManager
-      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('biocManager', repos='https://cran.rstudio.com/')\""
+    # - name: Install BiocManager
+    #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('biocManager', repos='https://cran.rstudio.com/')\""
 
-    - name: Install RStudio Professional Drivers
-      shell: "curl -O https://drivers.rstudio.org/7C152C12/installer/rstudio-drivers_1.6.0_amd64.deb && yes | gdebi rstudio-drivers_1.6.0_amd64.deb"
+    # - name: Install RStudio Professional Drivers
+    #   shell: "curl -O https://drivers.rstudio.org/7C152C12/installer/rstudio-drivers_1.6.0_amd64.deb && yes | gdebi rstudio-drivers_1.6.0_amd64.deb"
 
-    - name: Basic driver config
-      shell: "cp /etc/odbcinst.ini /etc/odbcinst.ini.bak && cat /opt/rstudio-drivers/odbcinst.ini.sample | tee /etc/odbcinst.ini"
+    # - name: Basic driver config
+    #   shell: "cp /etc/odbcinst.ini /etc/odbcinst.ini.bak && cat /opt/rstudio-drivers/odbcinst.ini.sample | tee /etc/odbcinst.ini"
 
     # R 4.0.0
     - name: Install R 4.0
@@ -58,26 +58,26 @@
       shell: "aptdcon --add-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu {{ ansible_distribution_release }}-cran40/' && aptdcon --refresh"
 
     # Install R packages for R 4.0.0
-    - name: Install devtools
-      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('devtools', repos=('https://cran.rstudio.com/'))\""
+    # - name: Install devtools
+    #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('devtools', repos=('https://cran.rstudio.com/'))\""
 
-    - name: Install synapser
-      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('synapser', repos=c('http://ran.synapse.org', 'https://cran.rstudio.com/'))\""
+    # - name: Install synapser
+    #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('synapser', repos=c('http://ran.synapse.org', 'https://cran.rstudio.com/'))\""
 
-    - name: Install tidyverse
-      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('tidyverse')\""
+    # - name: Install tidyverse
+    #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('tidyverse')\""
 
     - name: Install shiny
       shell: "/opt/R/4.0.0/bin/R -e \"install.packages('shiny', repos='https://cran.rstudio.com/')\""
 
-    - name: Install BiocManager
-      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('biocManager', repos='https://cran.rstudio.com/')\""
+    # - name: Install BiocManager
+    #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('biocManager', repos='https://cran.rstudio.com/')\""
 
-    - name: Install RStudio Professional Drivers
-      shell: "curl -O https://drivers.rstudio.org/7C152C12/installer/rstudio-drivers_1.6.0_amd64.deb && yes | gdebi  rstudio-drivers_1.6.0_amd64.deb"
+    # - name: Install RStudio Professional Drivers
+    #   shell: "curl -O https://drivers.rstudio.org/7C152C12/installer/rstudio-drivers_1.6.0_amd64.deb && yes | gdebi  rstudio-drivers_1.6.0_amd64.deb"
 
-    - name: Basic driver config
-      shell: "cp /etc/odbcinst.ini /etc/odbcinst.ini.bak && cat /opt/rstudio-drivers/odbcinst.ini.sample | tee /etc/odbcinst.ini"
+    # - name: Basic driver config
+    #   shell: "cp /etc/odbcinst.ini /etc/odbcinst.ini.bak && cat /opt/rstudio-drivers/odbcinst.ini.sample | tee /etc/odbcinst.ini"
 
     # Symlink R 4.0.0
     - name: Symlink R 4.0.0

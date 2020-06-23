@@ -14,7 +14,7 @@
         executable: pip3
 
     - name: Install dependencies
-      shell: "yes | aptdcon --hide-terminal --install \"gdebi-core zlib1g-dev libclang-dev libssl-dev libffi-dev libcurl4-openssl-dev libapparmor1 libssl1.0.0 libxml2-dev libjpeg-dev libpng-dev libfreetype6-dev libtiff5-dev libcairo2-dev libxt-dev bzip2 unixodbc unixodbc-devel\""
+      shell: "yes | aptdcon --hide-terminal --install 'gdebi-core zlib1g-dev libclang-dev libssl-dev libffi-dev libcurl4-openssl-dev libapparmor1 libssl1.0.0 libxml2-dev libjpeg-dev libpng-dev libfreetype6-dev libtiff5-dev libcairo2-dev libxt-dev bzip2 unixodbc unixodbc-devel'"
 
     - name: Add the CRAN apt key
       apt_key:

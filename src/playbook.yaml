@@ -30,19 +30,19 @@
 
     # Install R packages for R 3.6.3
     # - name: Install devtools
-    #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('devtools', repos=('https://cran.rstudio.com/'))\""
+    #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('devtools', repos=c('https://cran.rstudio.com/'))\""
 
     # - name: Install synapser
     #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('synapser', repos=c('http://ran.synapse.org', 'https://cran.rstudio.com/'))\""
 
     # - name: Install tidyverse
-    #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('tidyverse')\""
+    #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('tidyverse', repos=c('https://cran.rstudio.com/'))\""
 
-    - name: Install shiny
-      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('shiny', repos='https://cran.rstudio.com/')\""
+    # - name: Install shiny
+    #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('shiny', repos=c('https://cran.rstudio.com/'))\""
 
     # - name: Install BiocManager
-    #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('biocManager', repos='https://cran.rstudio.com/')\""
+    #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('biocManager', repos=c('https://cran.rstudio.com/'))\""
 
     # - name: Install RStudio Professional Drivers
     #   shell: "curl -O https://drivers.rstudio.org/7C152C12/installer/rstudio-drivers_1.6.0_amd64.deb && yes | gdebi rstudio-drivers_1.6.0_amd64.deb"
@@ -59,19 +59,19 @@
 
     # Install R packages for R 4.0.0
     # - name: Install devtools
-    #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('devtools', repos=('https://cran.rstudio.com/'))\""
+    #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('devtools', repos=c('https://cran.rstudio.com/'))\""
 
     # - name: Install synapser
     #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('synapser', repos=c('http://ran.synapse.org', 'https://cran.rstudio.com/'))\""
 
     # - name: Install tidyverse
-    #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('tidyverse')\""
+    #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('tidyverse', repos=c('https://cran.rstudio.com/'))\""
 
-    - name: Install shiny
-      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('shiny', repos='https://cran.rstudio.com/')\""
+    # - name: Install shiny
+    #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('shiny', repos=c('https://cran.rstudio.com/'))\""
 
     # - name: Install BiocManager
-    #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('biocManager', repos='https://cran.rstudio.com/')\""
+    #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('biocManager', repos=c('https://cran.rstudio.com/'))\""
 
     # - name: Install RStudio Professional Drivers
     #   shell: "curl -O https://drivers.rstudio.org/7C152C12/installer/rstudio-drivers_1.6.0_amd64.deb && yes | gdebi  rstudio-drivers_1.6.0_amd64.deb"

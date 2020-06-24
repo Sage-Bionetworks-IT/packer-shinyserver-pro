@@ -28,27 +28,26 @@
     - name: Add R-Project apt repository
       shell: "aptdcon --add-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu {{ ansible_distribution_release }}-cran35/' && aptdcon --refresh"
 
+    # Symlink R 3.6.3
+    - name: Symlink R 3.6.3
+      shell: "ln -s /opt/R/3.6.3/bin/R /usr/local/bin/R && ln -s /opt/R/3.6.3/bin/Rscript /usr/local/bin/Rscript"
+
     # Install R packages for R 3.6.3
-    # - name: Install devtools
-    #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('devtools', repos=c('https://cran.rstudio.com/'))\""
+    - name: Install devtools
+      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('devtools', repos=c('https://cran.rstudio.com/'))\""
 
-    # - name: Install synapser
-    #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('synapser', repos=c('http://ran.synapse.org', 'https://cran.rstudio.com/'))\""
-
-    # - name: Install tidyverse
-    #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('tidyverse', repos=c('https://cran.rstudio.com/'))\""
+    - name: Install tidyverse
+      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('tidyverse', repos=c('https://cran.rstudio.com/'))\""
 
     - name: Install shiny
       shell: "/opt/R/3.6.3/bin/R -e \"install.packages('shiny', repos=c('https://cran.rstudio.com/'))\""
 
-    # - name: Install BiocManager
-    #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('BiocManager', repos=c('https://cran.rstudio.com/'))\""
+    - name: Install BiocManager
+      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('BiocManager', repos=c('https://cran.rstudio.com/'))\""
 
-    # - name: Install RStudio Professional Drivers
-    #   shell: "curl -O https://drivers.rstudio.org/7C152C12/installer/rstudio-drivers_1.6.0_amd64.deb && yes | gdebi rstudio-drivers_1.6.0_amd64.deb"
+    - name: Install synapser
+      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('synapser', repos=c('http://ran.synapse.org', 'https://cran.rstudio.com/'))\""
 
-    # - name: Basic driver config
-    #   shell: "cp /etc/odbcinst.ini /etc/odbcinst.ini.bak && cat /opt/rstudio-drivers/odbcinst.ini.sample | tee /etc/odbcinst.ini"
 
     # R 4.0.0
     - name: Install R 4.0
@@ -57,31 +56,25 @@
     - name: Add R-Project apt repository
       shell: "aptdcon --add-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu {{ ansible_distribution_release }}-cran40/' && aptdcon --refresh"
 
+    # Symlink R 4.0.0
+    - name: Symlink R 4.0.0
+      shell: "rm /usr/local/bin/R /usr/local/bin/Rscript && ln -s /opt/R/4.0.0/bin/R /usr/local/bin/R && ln -s /opt/R/4.0.0/bin/Rscript /usr/local/bin/Rscript"
+
     # Install R packages for R 4.0.0
-    # - name: Install devtools
-    #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('devtools', repos=c('https://cran.rstudio.com/'))\""
+    - name: Install devtools
+      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('devtools', repos=c('https://cran.rstudio.com/'))\""
 
-    # - name: Install synapser
-    #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('synapser', repos=c('http://ran.synapse.org', 'https://cran.rstudio.com/'))\""
-
-    # - name: Install tidyverse
-    #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('tidyverse', repos=c('https://cran.rstudio.com/'))\""
+    - name: Install tidyverse
+      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('tidyverse', repos=c('https://cran.rstudio.com/'))\""
 
     - name: Install shiny
       shell: "/opt/R/4.0.0/bin/R -e \"install.packages('shiny', repos=c('https://cran.rstudio.com/'))\""
 
-    # - name: Install BiocManager
-    #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('BiocManager', repos=c('https://cran.rstudio.com/'))\""
+    - name: Install BiocManager
+      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('BiocManager', repos=c('https://cran.rstudio.com/'))\""
 
-    # - name: Install RStudio Professional Drivers
-    #   shell: "curl -O https://drivers.rstudio.org/7C152C12/installer/rstudio-drivers_1.6.0_amd64.deb && yes | gdebi  rstudio-drivers_1.6.0_amd64.deb"
-
-    # - name: Basic driver config
-    #   shell: "cp /etc/odbcinst.ini /etc/odbcinst.ini.bak && cat /opt/rstudio-drivers/odbcinst.ini.sample | tee /etc/odbcinst.ini"
-
-    # Symlink R 4.0.0
-    - name: Symlink R 4.0.0
-      shell: "ln -s /opt/R/4.0.0/bin/R /usr/local/bin/R && ln -s /opt/R/4.0.0/bin/Rscript /usr/local/bin/Rscript"
+    - name: Install synapser
+      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('synapser', repos=c('http://ran.synapse.org', 'https://cran.rstudio.com/'))\""
 
     # Install Shiny server Pro
     - name: Download Shiny Server

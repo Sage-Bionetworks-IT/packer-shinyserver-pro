@@ -38,11 +38,11 @@
     # - name: Install tidyverse
     #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('tidyverse', repos=c('https://cran.rstudio.com/'))\""
 
-    # - name: Install shiny
-    #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('shiny', repos=c('https://cran.rstudio.com/'))\""
+    - name: Install shiny
+      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('shiny', repos=c('https://cran.rstudio.com/'))\""
 
     # - name: Install BiocManager
-    #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('biocManager', repos=c('https://cran.rstudio.com/'))\""
+    #   shell: "/opt/R/3.6.3/bin/R -e \"install.packages('BiocManager', repos=c('https://cran.rstudio.com/'))\""
 
     # - name: Install RStudio Professional Drivers
     #   shell: "curl -O https://drivers.rstudio.org/7C152C12/installer/rstudio-drivers_1.6.0_amd64.deb && yes | gdebi rstudio-drivers_1.6.0_amd64.deb"
@@ -67,11 +67,11 @@
     # - name: Install tidyverse
     #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('tidyverse', repos=c('https://cran.rstudio.com/'))\""
 
-    # - name: Install shiny
-    #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('shiny', repos=c('https://cran.rstudio.com/'))\""
+    - name: Install shiny
+      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('shiny', repos=c('https://cran.rstudio.com/'))\""
 
     # - name: Install BiocManager
-    #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('biocManager', repos=c('https://cran.rstudio.com/'))\""
+    #   shell: "/opt/R/4.0.0/bin/R -e \"install.packages('BiocManager', repos=c('https://cran.rstudio.com/'))\""
 
     # - name: Install RStudio Professional Drivers
     #   shell: "curl -O https://drivers.rstudio.org/7C152C12/installer/rstudio-drivers_1.6.0_amd64.deb && yes | gdebi  rstudio-drivers_1.6.0_amd64.deb"

@@ -34,19 +34,19 @@
 
     # Install R packages for R 3.6.3
     - name: Install devtools
-      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('devtools', repos=c('https://cran.rstudio.com/'))\""
+      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('devtools', repos=c('https://cran.rstudio.com/'))\" >/dev/null"
 
     - name: Install tidyverse
-      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('tidyverse', repos=c('https://cran.rstudio.com/'))\""
+      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('tidyverse', repos=c('https://cran.rstudio.com/'))\" >/dev/null"
 
     - name: Install shiny
-      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('shiny', repos=c('https://cran.rstudio.com/'))\""
+      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('shiny', repos=c('https://cran.rstudio.com/'))\" >/dev/null"
 
     - name: Install BiocManager
-      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('BiocManager', repos=c('https://cran.rstudio.com/'))\""
+      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('BiocManager', repos=c('https://cran.rstudio.com/'))\" >/dev/null"
 
     - name: Install synapser
-      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('synapser', repos=c('http://ran.synapse.org', 'https://cran.rstudio.com/'))\""
+      shell: "/opt/R/3.6.3/bin/R -e \"install.packages('synapser', repos=c('http://ran.synapse.org', 'https://cran.rstudio.com/'))\" >/dev/null"
 
 
     # R 4.0.0
@@ -62,19 +62,19 @@
 
     # Install R packages for R 4.0.0
     - name: Install devtools
-      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('devtools', repos=c('https://cran.rstudio.com/'))\""
+      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('devtools', repos=c('https://cran.rstudio.com/'))\" >/dev/null"
 
     - name: Install tidyverse
-      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('tidyverse', repos=c('https://cran.rstudio.com/'))\""
+      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('tidyverse', repos=c('https://cran.rstudio.com/'))\" >/dev/null"
 
     - name: Install shiny
-      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('shiny', repos=c('https://cran.rstudio.com/'))\""
+      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('shiny', repos=c('https://cran.rstudio.com/'))\" >/dev/null"
 
     - name: Install BiocManager
-      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('BiocManager', repos=c('https://cran.rstudio.com/'))\""
+      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('BiocManager', repos=c('https://cran.rstudio.com/'))\" >/dev/null"
 
     - name: Install synapser
-      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('synapser', repos=c('http://ran.synapse.org', 'https://cran.rstudio.com/'))\""
+      shell: "/opt/R/4.0.0/bin/R -e \"install.packages('synapser', repos=c('http://ran.synapse.org', 'https://cran.rstudio.com/'))\" >/dev/null"
 
     # Install Shiny server Pro
     - name: Download Shiny Server
